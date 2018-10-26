@@ -27,3 +27,9 @@ we are able to take advantage of existing adapters to data sources. In
 addition, by adapting to HAPI-compliant services we can offer access
 to their datasets through LaTiS clients and enable additional
 operations.
+
+## Building
+
+Just run `make`. You'll need to have [Nix][nix] installed.
+
+[nix]: https://nixos.org/nix/
