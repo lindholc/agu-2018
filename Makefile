@@ -1,2 +1,2 @@
 default:
-	nix-shell --run 'pdflatex poster.tex'
+	nix-shell --run 'pdflatex -shell-escape poster.tex'
