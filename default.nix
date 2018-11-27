@@ -17,7 +17,8 @@ let
     minted
     framed
     fvextra
-    ifplatform;
+    ifplatform
+    cm-super;
   };
 in {
   poster = pkgs.stdenv.mkDerivation {
