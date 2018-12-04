@@ -3,13 +3,12 @@
 <dataset id="simple_dataset">
 
     <adapter class="latis.reader.tsml.AsciiAdapter"
-             location="${dataset.dir}/simple_dataset.csv"
+             location="simple_dataset.csv"
              delimiter=","
              commentCharacter="#"/>
 
     <time type="text">
         <metadata units="yyyy-MM-dd'T'hh:mm:ss'Z'"/>
-        <metadata length="20"/>
         <metadata min="2018-01-01T00:00:00Z"/>
         <metadata max="2018-01-01T00:00:02Z"/>
     </time>

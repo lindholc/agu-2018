@@ -44,7 +44,8 @@
         \begin{itemize}
         \item The LASP HAPI server is a standalone data server
           implementing the Heliophysics Application Programmer’s
-          Interface (HAPI) 2.0 specification.
+          Interface 2.0 specification (HAPI,
+          \texttt{https://github.com/hapi-server/data-specification/}).
         \item HAPI is an interoperable, REST-style interface to
           timeseries data. It provides mechanisms for viewing a
           catalog of datasets, accessing dataset metadata, and
@@ -60,7 +61,7 @@
           LaTiS, including datasets from the LASP Interactive Solar
           Irradiance Datacenter (LISIRD,
           \texttt{http://lasp.colorado.edu/lisird}).
-        \item It is open source and developed on GitHub.
+        \item Our server is open source and developed on GitHub.
         \end{itemize}
       }
 
@@ -164,7 +165,7 @@
       \texttt{http4s} web framework. We implemented the server with a
       tagless final DSL (domain-specific language) to decouple generic
       server concerns from the data access layer. While LaTiS 2 is the
-      default data access library, any library for which an
+      default data access library, any library or service for which an
       interpreter can be defined may be used. \\
 
       \begin{minipage}[t]{0.45\linewidth}
@@ -192,8 +193,9 @@
       \begin{minipage}[t]{0.45\linewidth}
         \setlength{\parskip}{0.5em}
         \section*{Interpreters}
-        Each backend provides an interpreter for the algebras defined
-        above. The default interpreter uses the LaTiS 2 library.
+        Interpreters translate the DSL defined by the algebra to a
+        specific implementation. The default interpreter uses the
+        LaTiS 2 library.
 
         \inputminted{scala}{src/Interpreter1.scala}
 
