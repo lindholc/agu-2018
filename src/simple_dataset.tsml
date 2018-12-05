@@ -2,19 +2,22 @@
 
 <dataset id="simple_dataset">
 
-    <adapter class="latis.reader.tsml.AsciiAdapter"
-             location="simple_dataset.csv"
-             delimiter=","
-             commentCharacter="#"/>
+  <!-- Specify the adapter and how to read the data file. -->
+  <adapter class="latis.reader.tsml.AsciiAdapter"
+           location="simple_dataset.csv"
+           delimiter=","
+           commentCharacter="#"/>
 
-    <time type="text">
-        <metadata units="yyyy-MM-dd'T'hh:mm:ss'Z'"/>
-        <metadata min="2018-01-01T00:00:00Z"/>
-        <metadata max="2018-01-01T00:00:02Z"/>
-    </time>
+  <!-- Specify the model (a function of time to value) and
+       metadata for each parameter. -->
+  <time type="text">
+    <metadata units="yyyy-MM-dd'T'hh:mm:ss'Z'"/>
+    <metadata min="2018-01-01T00:00:00Z"/>
+    <metadata max="2018-01-01T00:00:02Z"/>
+  </time>
 
-    <integer id="value">
-        <metadata units="units"/>
-    </integer>
+  <integer id="value">
+    <metadata units="units"/>
+  </integer>
 
 </dataset>
